@@ -1,0 +1,61 @@
+// .gallery {
+//   position: relative;
+
+//   // &::before {
+//   //   content: "";
+//   //   position: absolute;
+//   //   right: 5%;
+//   //   bottom: 6%;
+//   //   width: 138px;
+//   //   height: 135px;
+//   //   background-image: url("../img/sprite.svg#chemical");
+//   //   background-position: bottom;
+//   //   background-size: cover;
+//   //   background-repeat: no-repeat;
+//   // }
+
+//   &__list {
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//     margin-bottom: rem(66);
+//     gap: 10px;
+
+//     &--dentures {
+//       gap: 5px 10px;
+//     }
+
+//     @include for-width(-tablet) {
+//       grid-template-columns: repeat(2, 1fr);
+//       gap: 20px;
+//     }
+
+//     @include for-width(-mobile-l) {
+//       grid-template-columns: repeat(1, 1fr);
+//       margin-bottom: rem(30);
+//       gap: 10px;
+//     }
+//   }
+
+//   &__item {
+//     position: relative;
+//     transform: scale(1);
+//     transition: transform 0.3s ease-in-out;
+//     cursor: pointer;
+
+//     &:hover {
+//       transform: scale(0.97);
+//     }
+//   }
+
+//   &__more {
+//     margin: 0 auto;
+//     width: 100%;
+//     max-width: 350px;
+//   }
+
+//   // .btn {
+//   //   margin: 0 auto;
+//   //   width: 100%;
+//   //   max-width: 300px;
+//   // }
+// }

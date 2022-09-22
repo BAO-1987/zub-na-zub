@@ -1,0 +1,72 @@
+.services {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 12%;
+    bottom: -50%;
+    z-index: -2;
+    width: 280px;
+    height: 280px;
+    background-image: url("../img/sprite.svg#hexan");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include for-width(-desktop-med) {
+      bottom: -35%;
+    }
+
+    @include for-width(-tablet) {
+      bottom: -15%;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: rem(69);
+    gap: clamp(20px, 3.25rem, 60px);
+
+    @include for-width(-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 20px;
+    }
+
+    @include for-width(-mobile-l) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    @include bg-cover;
+
+    &:last-child {
+      @include for-width(-tablet) {
+        grid-column: 2 span;
+      }
+
+      @include for-width(-mobile-l) {
+        grid-column: auto;
+      }
+    }
+  }
+
+  &__more {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 420px;
+
+    @include for-width(-mobile-s) {
+      max-width: 320px;
+    }
+  }
+
+  .content {
+    gap: 50px;
+  }
+}

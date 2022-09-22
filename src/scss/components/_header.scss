@@ -1,0 +1,13 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin-bottom: 20px;
+  padding: rem(51) 0 rem(40);
+  background-color: var(--color-black);
+
+  @include for-width(-tablet) {
+    margin-bottom: 10px;
+    padding: rem(15) 0;
+  }
+}

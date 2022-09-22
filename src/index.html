@@ -1,0 +1,42 @@
+@include('html/_head.html',{
+pageTitle:'Головна'
+})
+
+<body class="page__body">
+
+  <div class="site-container">
+
+    @include('html/_header.html')
+
+    <main class="main">
+
+      <div class="container">
+
+        @include('html/home/_hero.html')
+
+        @include('html/home/_advantages.html')
+
+        @include('html/home/_services.html')
+
+        @include('html/home/_gallery.html')
+
+        @include('html/home/_reviews.html')
+
+        @include('html/home/_news.html')
+
+        @include('html/_contacts.html')
+
+      </div>
+
+    </main>
+
+    @include('html/_footer.html')
+
+    @include('html/_modal.html')
+
+
+  </div>
+
+</body>
+
+</html>

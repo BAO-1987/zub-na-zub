@@ -1,0 +1,48 @@
+.tabs {
+  color: var(--color-white);
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    margin-bottom: rem(70);
+    gap: 15px;
+
+    &-btn {
+      @include adaptive_size("font-size", 16, 14);
+
+      border: 1px solid var(--color-white);
+      padding: rem(18) rem(45);
+      color: var(--color-white);
+      transition: background-color 0.3s linear;
+
+      @include for-width(-desktop-lg) {
+        padding: rem(18) rem(25);
+      }
+    }
+
+    &-btn--active {
+      background-color: var(--color-active);
+
+      &:focus {
+        background-color: var(--color-active);
+      }
+    }
+
+    @include for-width(-desktop-med) {
+      padding: rem(15) rem(15);
+      grid-template-columns: repeat(3, auto);
+    }
+
+    @include for-width(-mobile-l) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__panel {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}

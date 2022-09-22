@@ -1,0 +1,45 @@
+.price {
+  position: relative;
+  margin-bottom: rem(190);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: -10%;
+    z-index: -2;
+    width: 309px;
+    height: 309px;
+    background-image: url("../img/sprite.svg#hexan");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include for-width(-mobile-l) {
+      top: 0;
+      width: 230px;
+      height: 230px;
+    }
+  }
+
+  .title {
+    margin-bottom: rem(30);
+  }
+
+  .text {
+    margin-bottom: rem(70);
+    max-width: 635px;
+  }
+
+  .content {
+    gap: 50px;
+  }
+
+  @include for-width (-desktop-med) {
+    margin-bottom: rem(100);
+  }
+
+  @include for-width (-mobile-l) {
+    margin-bottom: rem(50);
+  }
+}

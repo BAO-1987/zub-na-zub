@@ -1,0 +1,117 @@
+.hero {
+  position: relative;
+  padding-top: rem(52);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: -30%;
+    z-index: -2;
+    width: 704px;
+    height: 700px;
+    background-image: url("../img/sprite.svg#hexan");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include for-width(-desktop-med) {
+      top: 10%;
+      width: 304px;
+      height: 300px;
+    }
+
+    @include for-width(-mobile-l) {
+      top: 0;
+      width: 230px;
+      height: 230px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -25%;
+    z-index: -2;
+    width: 243px;
+    height: 249px;
+    background-image: url("../img/sprite.svg#hexan");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(-180deg);
+  }
+
+  &__title {
+    @include adaptive_size("font-size", 50, 24);
+
+    margin-bottom: rem(32);
+    width: 100%;
+    max-width: 1040px;
+  }
+
+  &__text {
+    margin: 0 auto rem(52);
+  }
+
+  &__content {
+    position: relative;
+    text-align: center;
+    gap: rem(50);
+
+    @include for-width(-tablet) {
+      gap: rem(25);
+    }
+  }
+
+  &__link {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-flex;
+    border: 1px solid var(--color-white);
+    padding: rem(15) rem(30);
+    width: 84px;
+    height: 54px;
+    transition: border 0.3s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      mask-image: url("../img/sprite.svg#chats");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 24px;
+      height: 24px;
+      background-color: var(--color-white);
+      transition: background-color 0.3s linear;
+    }
+
+    &:hover {
+      border: 1px solid var(--color-blue);
+
+      &::before {
+        background-color: var(--color-blue);
+      }
+    }
+
+    &:active {
+      border: 1px solid var(--color-active);
+
+      &::before {
+        background-color: var(--color-active);
+      }
+    }
+
+    @include for-width(-tablet) {
+      position: relative;
+      order: -1;
+    }
+  }
+
+  @include for-width(-tablet) {
+    padding-top: rem(25);
+  }
+}

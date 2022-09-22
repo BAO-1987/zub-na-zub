@@ -1,0 +1,41 @@
+.production {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: -2%;
+    z-index: -2;
+    width: 420px;
+    height: 420px;
+    background-image: url("../img/sprite.svg#hexan");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include for-width(-mobile-l) {
+      top: -1%;
+      width: 220px;
+      height: 220px;
+    }
+  }
+
+  .title {
+    margin-bottom: rem(30);
+  }
+
+  &__list {
+    text-align: left;
+
+    @include for-width(-mobile-l) {
+      text-align: center;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(34);
+    }
+  }
+}

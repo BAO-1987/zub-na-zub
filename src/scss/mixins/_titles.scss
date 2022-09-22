@@ -1,0 +1,25 @@
+/* stylelint-disable-next-line at-rule-blacklist */
+@mixin h1 {
+  @include adaptive_size("font-size", 40, 25);
+
+  margin: 0 auto rem(70);
+  font-weight: 900;
+  line-height: 1.7;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+@mixin h2 {
+  @include adaptive_size("font-size", 25, 20);
+
+  margin: 0 auto rem(37);
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}

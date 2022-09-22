@@ -1,0 +1,81 @@
+.article {
+  position: relative;
+  border: 1px solid var(--color-white);
+  transition: border 0.3s linear;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid var(--color-blue);
+
+    .article__title {
+      color: var(--color-blue);
+    }
+  }
+
+  &__content {
+    padding: rem(33) rem(51) rem(49);
+
+    @include for-width (-desktop-med) {
+      padding: rem(23) rem(30) rem(20);
+    }
+  }
+
+  &__title {
+    @include h2;
+
+    margin-bottom: 14px;
+    transition: color 0.3s linear;
+  }
+
+  &__link {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 25;
+    }
+  }
+
+
+  &__timeline {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    margin-bottom: rem(28);
+    width: 100%;
+    max-width: 345px;
+  }
+
+  &__time {
+    margin-right: auto;
+    font-size: 14px;
+    color: var(--color-grey);
+  }
+
+  &__more {
+    padding-right: 30px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s linear, background-color 0.3s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      mask-image: url("../img/sprite.svg#small-arrow");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 16px;
+      height: 16px;
+      background-color: var(--color-white);
+      transition: background-color 0.3s linear;
+    }
+  }
+}

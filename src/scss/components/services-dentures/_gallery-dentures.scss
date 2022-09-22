@@ -1,0 +1,61 @@
+.gallery-dentures {
+  position: relative;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   right: 5%;
+  //   bottom: 6%;
+  //   width: 138px;
+  //   height: 135px;
+  //   background-image: url("../img/sprite.svg#chemical");
+  //   background-position: bottom;
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  // }
+
+  &__list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: rem(66);
+    gap: 10px;
+
+    @include for-width (-desktop-med) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @include for-width (-mobile-l) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__item {
+    position: relative;
+    // transform: scale(1);
+    // transition: transform 0.3s ease-in-out;
+
+    //   &:hover {
+    //     transform: scale(0.97);
+    //   }
+  }
+
+  &__link {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 25;
+    }
+  }
+
+  .show-more {
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,33 @@
+@include('html/_head.html',{
+pageTitle:'Про нас'
+})
+
+<body class="page__body">
+
+  <div class="site-container">
+
+    @include('html/_header.html')
+
+    <main class="main">
+
+      <div class="container">
+
+        @include('html/about/_about.html')
+
+        @include('html/about/_stages.html')
+
+        @include('html/home/_reviews.html')
+
+        @include('html/about/_gallery.html')
+
+      </div>
+
+    </main>
+
+    @include('html/_footer.html')
+
+  </div>
+
+</body>
+
+</html>

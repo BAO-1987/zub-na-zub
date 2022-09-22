@@ -1,0 +1,20 @@
+.profit {
+  margin-bottom: rem(190);
+
+  &__content {
+    display: flex;
+    gap: rem(70);
+  }
+
+  .text {
+    text-align: left;
+  }
+
+  @include for-width(-desktop-med) {
+    margin-bottom: rem(100);
+  }
+
+  @include for-width(-mobile-l) {
+    margin-bottom: rem(50);
+  }
+}

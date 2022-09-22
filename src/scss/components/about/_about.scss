@@ -1,0 +1,28 @@
+.about {
+  position: relative;
+  margin-bottom: rem(70);
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 10%;
+    top: -30%;
+    z-index: -2;
+    width: 360px;
+    height: 360px;
+    background-image: url("../img/sprite.svg#hexan");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include for-width(-tablet) {
+      top: -10%;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(30);
+  }
+}

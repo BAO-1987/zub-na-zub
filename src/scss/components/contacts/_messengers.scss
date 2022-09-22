@@ -1,0 +1,20 @@
+.messengers {
+  margin-bottom: rem(190);
+
+  .title {
+    width: 100%;
+    max-width: 760px;
+  }
+
+  .content {
+    gap: rem(50);
+  }
+
+  @include for-width (-desktop-med) {
+    margin-bottom: rem(100);
+  }
+
+  @include for-width (-mobile-l) {
+    margin-bottom: rem(50);
+  }
+}

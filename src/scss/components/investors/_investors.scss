@@ -1,0 +1,11 @@
+.investors {
+  margin-bottom: rem(70);
+
+  .title {
+    margin-bottom: rem(30);
+  }
+
+  @include for-width (-mobile-l) {
+    margin-bottom: rem(50);
+  }
+}

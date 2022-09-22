@@ -1,0 +1,42 @@
+.implantation {
+  @include flex-cc;
+
+  position: relative;
+  margin-bottom: rem(120);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: -10%;
+    z-index: -2;
+    width: 309px;
+    height: 309px;
+    background-image: url("../img/sprite.svg#hexan");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include for-width(-mobile-l) {
+      top: 0;
+      width: 230px;
+      height: 230px;
+    }
+  }
+
+  .title--second {
+    margin-bottom: rem(30);
+  }
+
+  &__text {
+    margin-bottom: rem(30);
+  }
+
+  @include for-width(-desktop-med) {
+    margin-bottom: rem(100);
+  }
+
+  @include for-width(-mobile-l) {
+    margin-bottom: rem(30);
+  }
+}

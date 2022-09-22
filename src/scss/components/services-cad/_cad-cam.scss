@@ -1,0 +1,41 @@
+.cad-cam {
+  position: relative;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: -10%;
+    z-index: -2;
+    width: 309px;
+    height: 309px;
+    background-image: url("../img/sprite.svg#hexan");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include for-width(-mobile-l) {
+      top: 0;
+      width: 230px;
+      height: 230px;
+    }
+  }
+
+  .title--second {
+    margin-bottom: rem(30);
+  }
+
+  &__text {
+    margin-bottom: rem(22);
+    text-align: left;
+
+    p:not(:last-child) {
+      margin-bottom: rem(32);
+    }
+  }
+
+  &__box {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,30 @@
+.pagination {
+  &__list {
+    @include flex-all-center;
+  }
+
+  &__item {
+    border: 1px solid var(--color-white);
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:nth-child(4n) {
+      align-items: baseline;
+      border: none;
+      font-size: 30px;
+    }
+  }
+
+  &__link {
+    @include flex-all-center;
+
+    width: 40px;
+    height: 40px;
+
+    &--active {
+      background-color: var(--color-active);
+    }
+  }
+}
