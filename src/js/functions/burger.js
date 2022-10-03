@@ -4,11 +4,11 @@ import { enableScroll } from '../functions/enable-scroll';
 (function(){
   const burger = document?.querySelector('[data-burger]');
   const menu = document?.querySelector('[data-menu]');
-  const menuItems = document?.querySelectorAll('[data-menu-item]');
+  // const menuItems = document?.querySelectorAll('[data-menu-item]');
 
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');
-    menu?.classList.toggle('menu-active');
+    menu?.classList.toggle('menu--active');
 
     if (menu?.classList.contains('menu-active')) {
       burger?.setAttribute('aria-expanded', 'true');
@@ -29,15 +29,15 @@ import { enableScroll } from '../functions/enable-scroll';
   //   enableScroll();
   // });
 
-  menuItems?.forEach(el => {
-    el.addEventListener('click', () => {
-      burger?.setAttribute('aria-expanded', 'false');
-      burger?.setAttribute('aria-label', 'Открыть меню');
-      burger.classList.remove('burger--active');
-      menu.classList.remove('menu-active');
-      enableScroll();
-    });
-  });
+  // menuItems?.forEach(el => {
+  //   el.addEventListener('click', () => {
+  //     burger?.setAttribute('aria-expanded', 'false');
+  //     burger?.setAttribute('aria-label', 'Открыть меню');
+  //     burger.classList.remove('burger--active');
+  //     menu.classList.remove('menu-active');
+  //     enableScroll();
+  //   });
+  // });
 })();
 
 
