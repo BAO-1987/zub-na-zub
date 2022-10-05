@@ -1,8 +1,6 @@
 .graph-modal {
   &__container {
     background-color: var(--color-black);
-    width: 100%;
-    max-width: 885px;
     padding: rem(70) rem(200);
 
     @include for-width(-tablet) {

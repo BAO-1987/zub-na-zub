@@ -104,10 +104,6 @@
       background-color: var(--color-blue);
     }
 
-    // &:not(:first-child) {
-    //   display: inline-grid;
-    // }
-
     span:not([class]) {
       display: inline-block;
       margin-bottom: 12px;
@@ -128,6 +124,7 @@
 
     &--schedule {
       margin-right: 27px;
+      pointer-events: none;
 
       &::before {
         mask-image: url("../img/sprite.svg#schedule");

@@ -8,7 +8,7 @@
 
   @include for-width(-tablet) {
     margin-bottom: 10px;
-    padding: rem(15);
+    padding: 20px 0;
   }
 
   .logo {
@@ -17,8 +17,6 @@
     right: 0;
     top: 50%;
     margin: 0 auto;
-    width: 100%;
-    max-width: 107px;
     transform: translateY(-41%);
 
     @include for-width(-tablet) {
@@ -28,8 +26,8 @@
 
   &__contact {
     position: absolute;
-    right: 5px;
-    top: 15px;
+    right: 10px;
+    top: 18px;
     display: none;
 
     &::before {

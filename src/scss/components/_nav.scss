@@ -2,9 +2,8 @@
   position: relative;
 
   @include for-width(-tablet) {
-
     position: absolute;
-    right: 0;
+    left: 0;
     top: var(--header-height);
     overflow-y: auto;
     padding: rem(25);
@@ -93,10 +92,6 @@
       }
     }
 
-    // &--menu {
-    //   margin-right: 0;
-    // }
-
     &:nth-child(4) {
       margin-right: auto;
     }
@@ -140,12 +135,6 @@
       transition: transform 0.3s linear;
     }
 
-    // &--phone {
-    //   @include for-width(-tablet) {
-    //     font-size: 0;
-    //   }
-    // }
-
     &:focus {
       outline: 2px solid var(--color-active);
       outline-offset: 2px;
@@ -183,12 +172,6 @@
         svg {
           transform: rotate(180deg);
         }
-      }
-    }
-
-    &--location {
-      &::before {
-        content: none;
       }
     }
   }

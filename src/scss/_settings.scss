@@ -18,8 +18,10 @@
   }
 }
 
-// .site-container {
-// }
+.site-container {
+  display: flex;
+  flex-direction: column;
+}
 
 .container {
   margin: 0 auto;
@@ -140,11 +142,12 @@ section {
 
 .logo {
   @include flex-all-center;
+
+  width: 100%;
+  max-width: 107px;
 }
 
 .btn {
-  @include adaptive_size("font-size", 16, 12);
-
   position: relative;
   display: flex;
   align-items: center;
@@ -168,10 +171,6 @@ section {
     width: 16px;
     height: 16px;
     background-color: var(--color-white);
-  }
-
-  &::first-letter {
-    text-transform: capitalize;
   }
 
   &:focus {
@@ -198,8 +197,8 @@ section {
   &--second {
     border: 1px solid var(--color-white);
     padding: rem(17) rem(84) rem(17) rem(45);
-    width: 100%;
-    max-width: 300px;
+    // width: 100%;
+    // max-width: 300px;
     background-color: transparent;
 
     &::before {
@@ -221,6 +220,10 @@ section {
 
       &::before {
         background-color: var(--color-active);
+      }
+
+      &:active {
+        background-color: transparent;
       }
     }
   }
@@ -247,7 +250,7 @@ section {
     margin: 0 auto;
     border: 1px solid var(--color-white);
     width: 100%;
-    max-width: 270px;
+    max-width: 275px;
     background-color: transparent;
 
     &::before {
@@ -281,6 +284,19 @@ section {
       height: 24px;
       background-color: var(--color-white);
     }
+
+    &:hover {
+      border: 1px solid var(--color-active);
+      color: var(--color-active);
+
+      &::before {
+        background-color: var(--color-active);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
   }
 
   &--instagram {
@@ -300,6 +316,23 @@ section {
       height: 24px;
       background-color: var(--color-white);
     }
+
+    &:hover {
+      border: 1px solid var(--color-active);
+      color: var(--color-active);
+
+      &::before {
+        background-color: var(--color-active);
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+  }
+
+  @include for-width(-mobile-sl) {
+    @include adaptive_size("font-size", 14, 12);
   }
 }
 
